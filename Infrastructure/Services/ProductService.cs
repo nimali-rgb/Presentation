@@ -3,14 +3,14 @@ using Infrastructure.Models;
 
 namespace Infrastructure.Services;
 
-public class ProductService
+public class ProductService(IFileService fileService) : IProductService
 {
     private List<Product> _products = [];
-    private readonly IFileService _fileService = fileService
+    private readonly IFileService _fileService = fileService;
 
         public void AddProductToList(Product product)
     {
-        product.Id = Guid.NewGuid.ToString();
+        product.Id = Guid.NewGuid().ToString();
 
         _products.Add(product);
 

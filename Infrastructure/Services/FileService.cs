@@ -26,10 +26,10 @@ public class FileService : IFileService
         }
     }
 
-    public void WrtiteToFile (IEnumerable<Product> products)
+   public void WriteToFile(IEnumerable<Product> products)
     {
         var json = JsonConvert.SerializeObject(products);
-        File.WriteAllText(_filePath,json);
+        File.WriteAllText(_filePath, json);
     }
 
     public IEnumerable<Product> ReadFromFile()
@@ -39,8 +39,5 @@ public class FileService : IFileService
         return products!;
     }
 
-    public void WriteToFile(IEnumerable<Product> products)
-    {
-        throw new NotImplementedException();
-    }
+   
 }
