@@ -8,9 +8,9 @@ public class ProductService
     private List<Product> _products = [];
     private readonly IFileService _fileService = fileService
 
-        public void AddProductToList(Product, product)
+        public void AddProductToList(Product product)
     {
-        Product.Id = Guid.NewGuid.ToString();
+        product.Id = Guid.NewGuid.ToString();
 
         _products.Add(product);
 
