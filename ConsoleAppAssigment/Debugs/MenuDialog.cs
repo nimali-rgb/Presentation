@@ -2,9 +2,9 @@
 
 namespace ConsoleAppAssigment.Debugs;
 
-public class MenuDialog(ProductDialog productDialog)
+public class MenuDialog(ProductDialog productDialogs)
 {
-    private readonly ProductDialog _productDialog = productDialog;
+    private readonly ProductDialog _productDialogs = productDialogs;
 
     public void MenuOptionDialog()
     {
@@ -19,12 +19,12 @@ public class MenuDialog(ProductDialog productDialog)
         switch (option)
         {
             case "1":
-                _productDialog.ListProductDialog();
+                _productDialogs.ListProductDialog();
 
                 break;
 
             case "2":
-                _productDialog.ListProductDialog();
+                _productDialogs.AddProductDialog();
                 break;
         }
     }

@@ -8,7 +8,7 @@ namespace Infrastructure.Services;
 public class FileService : IFileService
 {
     private static string _directoryPath = @"c:\cms25\prg1\data";
-    private string _filePath = Path.Combine(_directoryPath, "product.json");
+    private string _filePath = Path.Combine(_directoryPath, "products.json");
 
     public FileService()
     {
@@ -22,7 +22,7 @@ public class FileService : IFileService
             Directory.CreateDirectory(_directoryPath);
 
             if (!File.Exists(_filePath))
-                File.WriteAllText(_filePath, []);
+                File.WriteAllText(_filePath, "[]");
         }
     }
 
