@@ -32,8 +32,9 @@ public class MenuDialog(ProductDialog productDialog)
 
     public void Run()
     {
-        while(true) 
+        while (true)
         {
             MenuOptionDialog();
         }
+    }
 }
